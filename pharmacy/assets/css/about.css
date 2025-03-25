@@ -1,0 +1,68 @@
+/* 🔥 About Page Styling */
+.about-section {
+    text-align: center;
+    padding: 80px 5%;
+    background: linear-gradient(135deg, #f4f4f4 0%, #e1e1e1 100%);
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+    max-width: 1200px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* 🔥 About Page Container */
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 🔥 About Page Headings */
+.about-container h1 {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.about-container h2 {
+    font-size: 28px;
+    margin-top: 30px;
+    color: #0056b3;
+}
+
+/* 🔥 About Page Text */
+.about-container p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* 🔥 About Page List */
+.about-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-container ul li {
+    font-size: 18px;
+    color: #333;
+    padding: 10px;
+    background: rgba(0, 123, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🔥 Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

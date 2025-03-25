@@ -1,0 +1,92 @@
+/* 🔥 Services Page Styling */
+.services-section {
+    text-align: center;
+    padding: 80px 5%;
+    background: linear-gradient(135deg, #f4f4f4 0%, #e1e1e1 100%);
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+    max-width: 1200px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* 🔥 Services Page Container */
+.services-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* 🔥 Services Page Headings */
+.services-container h1 {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.services-container p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* 🔥 Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* 🔥 Individual Service Cards */
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* 🔥 Service Images */
+.service-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+/* 🔥 Service Title */
+.service-card h2 {
+    font-size: 22px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* 🔥 Service Description */
+.service-card p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 🔥 Hover Effects */
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔥 Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🔥 Responsive Design */
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}

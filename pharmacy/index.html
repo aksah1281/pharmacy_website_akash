@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Website</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/insurance-vaccines.css">
+    <link rel="stylesheet" href="assets/css/reviews.css">
+    <link rel="stylesheet" href="assets/css/contact-location.css">
+    <script src="assets/js/contact.js"></script>
+    <script defer src="assets/js/script.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.svg" alt="Pharmacy Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="javascript:void(0);" onclick="openContactPopup()">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+    <!-- Slideshow Container -->
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="assets/images/slide1.jpg" alt="Slide 1">
+            <div class="overlay"></div>
+            <div class="text">Affordable Medications</div>
+        </div>
+        <div class="slide fade">
+            <img src="assets/images/slide2.jpg" alt="Slide 2">
+            <div class="overlay"></div>
+            <div class="text">Quality Medicines You Can Trust</div>
+        </div>
+        <div class="slide fade">
+            <img src="assets/images/slide3.jpg" alt="Slide 3">
+            <div class="overlay"></div>
+            <div class="text">Expert Advice for Your Health</div>
+        </div>
+        <div class="slide fade">
+            <img src="assets/images/slide4.jpg" alt="Slide 4">
+            <div class="overlay"></div>
+            <div class="text">Fast & Reliable Service</div>
+        </div>
+    </div>
+
+        <!-- Mini Blog Section -->
+        <section class="pharmacist-section">
+            <div class ="container">
+            <div class="pharmacist-container">
+                <div class="pharmacist-image-container">
+                    <img src="assets/images/pharmacist.jpg" alt="Pharmacist" class="pharmacist-img">
+                    <p class="pharmacist-name">Vikas Ghiya</p>
+                </div>
+                <div class="pharmacist-info">
+                    <h2>Meet Our Expert Pharmacist</h2>
+                    <p>With years of experience in the pharmaceutical industry, our dedicated pharmacist is here to provide expert advice, quality medications, and personalized healthcare solutions for your needs.</p>
+                </div>
+            </div>
+            </div>
+
+        </section>
+<!-- Wrapper to keep both sections inside the same background -->
+<div class="transfer-delivery-wrapper">
+    <!-- Transfer Prescription Section (Circular & Floating) -->
+    <section class="prescription-section">
+        <div class="prescription-container">
+            <h2>Transfer Your Prescription</h2>
+            <div class="steps">
+                <div class="step">📞 Step 1: Give us a call</div>
+                <div class="step">📝 Step 2: Provide your information</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slash Divider -->
+    <div class="slash-divider"></div>
+
+    <!-- Free Delivery Section (Right) -->
+    <section class="delivery-section">
+        <div class="delivery-container">
+            <div class="delivery-info">
+                <h2>Free Delivery Within 5 Miles!</h2>
+                <p>We offer fast and reliable prescription delivery right to your doorstep at no extra cost.</p>
+            </div>
+            <div class="delivery-icon">
+                <img src="assets/images/truck.svg" alt="Delivery Truck">
+            </div>
+        </div>
+    </section>
+</div>
+
+
+    <!-- 🔥 Insurance & Vaccines Section -->
+    <section class="insurance-vaccines-container">
+        <div class="insurance-section">
+            <h2>We Accept All Major Insurances</h2>
+            <p>Our pharmacy accepts most major insurance plans to ensure your medications are covered.</p>
+            <div class="insurance-logos">
+                <div class="insurance-logo"><img src="assets/images/insurance1.png" alt="Insurance 1"></div>
+                <div class="insurance-logo"><img src="assets/images/insurance2.png" alt="Insurance 2"></div>
+                <div class="insurance-logo"><img src="assets/images/insurance3.png" alt="Insurance 3"></div>
+                <div class="insurance-logo"><img src="assets/images/insurance4.png" alt="Insurance 4"></div>
+            </div>
+        </div>
+
+        <div class="vaccines-section">
+            <h2>We Provide All Major Vaccines</h2>
+            <p>Stay protected with our range of essential vaccines, available at our pharmacy.</p>
+            <div class="vaccines-list">
+                <div class="vaccine-item">💉 Flu Shots</div>
+                <div class="vaccine-item">🦠 COVID-19 Vaccines</div>
+                <div class="vaccine-item">🦷 Shingles Vaccine</div>
+                <div class="vaccine-item">✈️ Travel Vaccines</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔥 Separate Customer Reviews Section -->
+    <section class="reviews-container">
+        <h2>What Our Customers Say</h2>
+        <div class="reviews-wrapper">
+            <div class="review-card"><img src="assets/images/review1.jpg" alt="Review 1"></div>
+            <div class="review-card"><img src="assets/images/review2.jpg" alt="Review 2"></div>
+            <div class="review-card"><img src="assets/images/review3.jpg" alt="Review 3"></div>
+        </div>
+    </section>
+
+    <!-- 🔥 Contact & Location Section -->
+<section class="contact-location-container">
+    <div class="contact-us">
+        <h2>Contact Us</h2>
+        <p>Have questions? Reach out to us and we'll be happy to assist you.</p>
+        
+        <form class="contact-form" onsubmit="sendMessage(event)">
+            <div class="input-box">
+                <input type="text" id="name" required>
+                <label>Name</label>
+            </div>
+            <div class="input-box">
+                <input type="email" id="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <textarea id="message" required></textarea>
+                <label>Message</label>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Location Section -->
+    <div class="location">
+        <h2>Our Location</h2>
+        <p>Visit us at our pharmacy for all your health needs.</p>
+        
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.552655088372!2d-82.3297398243642!3d28.142656375935758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2fb8570e8f95d%3A0xbd50834063823f51!2sPrime%20Rx%20Pharmacy!5e1!3m2!1sen!2sus!4v1740977169656!5m2!1sen!2sus"
+                allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- 🔥 Contact Popup -->
+<div id="contactPopup" class="contact-popup" style="display: none;">
+    <div class="contact-popup-content">
+        <span class="close-btn" onclick="closeContactPopup()">&times;</span>
+        <h2>Contact Us</h2>
+        <p>Reach out with any questions or to schedule an appointment!</p>
+        <div class="contact-details">
+            <p><strong>Email:</strong> info@primerxpharmacy.com</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

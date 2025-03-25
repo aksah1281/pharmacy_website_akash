@@ -1,0 +1,106 @@
+/* 🔥 Review Section */
+.reviews-container {
+    text-align: center;
+    padding: 80px 5%;
+    background: linear-gradient(135deg, #ffffff 0%, #f2f2f2 100%);
+    border-radius: 40px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+    margin: 60px auto;
+    max-width: 1300px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* 🔥 Section Heading */
+.reviews-container h2 {
+    font-size: 34px;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* 🔥 Reviews Wrapper */
+.reviews-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* 🔥 Enlarged Review Cards */
+.review-card {
+    width: 32%;
+    aspect-ratio: 16 / 9;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    background: #fff;
+}
+
+/* 🔥 3D Hover Effect */
+.review-card:hover {
+    transform: scale(1.07) rotate(1deg);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* 🔥 Glowing Hover Effect */
+.review-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 162, 255, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 20px;
+}
+
+/* Activate Glow Effect on Hover */
+.review-card:hover::before {
+    opacity: 1;
+}
+
+/* 🔥 Ensure Images Fit Properly Without Zoom */
+.review-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Fix zoom issue */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🔥 Slight Image Lift on Hover */
+.review-card:hover img {
+    transform: scale(1.02);
+}
+
+/* 🔥 Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🔥 Responsive Design */
+@media (max-width: 900px) {
+    .reviews-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-card {
+        width: 90%;
+        aspect-ratio: unset;
+        height: auto;
+    }
+
+    .review-card img {
+        object-fit: contain; /* Keep images from cropping */
+    }
+}
